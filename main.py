@@ -5,7 +5,7 @@ from src.utils import create_database, insert_tables_to_database
 
 
 def main():
-    """Функция для работы прогрммы"""
+    """Функция для работы прогрfммы"""
     params = config()
 
     data_employer = HeadHunterAPI().get_employers()
