@@ -5,7 +5,7 @@ from src.utils import create_database, insert_tables_to_database
 
 
 def main():
-    """Функция для работы прогрfммы"""
+    """Функция для работы с программой"""
     params = config()
 
     data_employer = HeadHunterAPI().get_employers()
@@ -34,9 +34,7 @@ def main():
                 print(i)
             print(message)
             print("Введите соответствующую цифру для вывода информации")
-
         elif user_input == "2":
-
             all_vacancies = db_manager.get_all_vacancies()
             print("Список всех вакансий с указанием названия компании, названия вакансии и зарплаты и ссылки на вакансию:")
             for i in all_vacancies:

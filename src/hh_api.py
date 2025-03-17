@@ -2,10 +2,7 @@ import requests
 
 
 class HeadHunterAPI:
-    """
-    Класс для работы с API HeadHunter
-    """
-
+    """Класс для работы с API HeadHunter"""
     def __init__(self, ):
         """конструктор класса"""
         self.__url = 'https://api.hh.ru/'
@@ -14,7 +11,7 @@ class HeadHunterAPI:
         self.employers = [4181, 78638, 906557, 727029, 29470, 80, 8884, 6189, 3177, 3529]
 
     def get_employers(self):
-        """загрузка работодателей"""
+        """Получение информации работодателях"""
         employers_info = []
         for employer_id in self.employers:
             temp_url = f"{self.__url}employers/{employer_id}"
@@ -24,7 +21,7 @@ class HeadHunterAPI:
         return employers_info
 
     def load_vacancies(self):
-        """загрузка вакансий"""
+        """Получение информации о вакансиях"""
         vacancy_info = []
         for employer_id in self.employers:
             self._params["employer_id"] = employer_id
